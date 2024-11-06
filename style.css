@@ -1,0 +1,152 @@
+/* Reset básico para garantir consistência entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo da página */
+body {
+    background: linear-gradient(135deg, #2c3e50, #34495e); /* Gradiente suave de tons escuros */
+    color: white;
+    font-family: "Chakra Petch", sans-serif;
+    margin-bottom: 100px;
+    line-height: 1.6;
+}
+
+/* Cabeçalho estilizado */
+header {
+    border-bottom: 4px solid rgb(52, 152, 219); /* Azul suave */
+    padding: 20px;
+    font-size: 36px;
+    color: rgb(52, 152, 219); /* Azul mais suave e vibrante */
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3); /* Sombra suave para destacar */
+}
+
+/* Estilo para a seção chamada (vídeo principal) */
+.chamada {
+    background: linear-gradient(135deg, #8e44ad, #9b59b6); /* Gradiente roxo vibrante */
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 4px solid rgb(52, 152, 219);
+}
+
+.chamada-texto {
+    max-width: 600px;
+    text-align: center;
+    margin-right: 30px;
+}
+
+h1 {
+    font-size: 50px; /* Aumentei o tamanho para maior destaque */
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4); /* Adicionando um sombreado mais suave */
+}
+
+p {
+    font-size: 24px;
+    color: rgb(52, 152, 219); /* Azul mais suave */
+    font-weight: 500;
+}
+
+/* Estilo para a seção de categorias de vídeos */
+.categoria {
+    padding: 40px 20px;
+    background: rgb(44, 62, 80); /* Tom escuro mais suave e moderno */
+    border-radius: 12px;
+    margin-top: 50px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.5); /* Sombra suave */
+}
+
+.categoria h2 {
+    color: rgb(52, 152, 219); /* Azul suave e vibrante */
+    font-size: 28px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* Estilo para o carrossel de vídeos */
+.categoria-videos {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+/* Estilo para os links de vídeos */
+.categoria-videos a {
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Estilo das miniaturas de vídeo */
+.categoria-videos img {
+    border-radius: 12px;
+    opacity: 0.85;
+    height: 250px;
+    width: 350px;
+    object-fit: cover;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Efeito hover nas imagens */
+.categoria-videos img:hover {
+    opacity: 1;
+    transform: scale(1.05); /* Zoom suave */
+    border: 4px solid rgb(52, 152, 219); /* Borda com o azul suave */
+}
+
+/* Adicionando efeito de hover no link */
+.categoria-videos a:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3); /* Sombra suave ao passar o mouse */
+}
+
+/* Responsividade para dispositivos menores */
+@media (max-width: 768px) {
+    .chamada-texto h1 {
+        font-size: 40px;
+    }
+
+    .chamada-texto p {
+        font-size: 20px;
+    }
+
+    .categoria-videos img {
+        height: 200px;
+        width: 280px;
+    }
+
+    .categoria h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 30px;
+    }
+
+    .chamada-texto h1 {
+        font-size: 30px;
+    }
+
+    .chamada-texto p {
+        font-size: 18px;
+    }
+
+    .categoria-videos img {
+        height: 160px;
+        width: 240px;
+    }
+}
